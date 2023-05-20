@@ -1,0 +1,24 @@
+
+<h1>Welcome To Marvellous Infosystems</h1>
+
+<button type="button"  class="btn btn-outline-info" id = "btn" (click)="getBatchDetails()">Batch Details</button>
+
+<div class = "BatchInfo" *ngIf="message">
+    <table class="table table-bordered">
+        <thead >
+          <tr class = "table-light">
+            <th scope="col">Name</th>
+            <th scope="col">Fees</th>
+            <th scope="col">Duration</th>
+          </tr>
+        </thead>
+        <tbody *ngFor = "let batch of message">
+          <tr class = "table-info">
+            <td>{{batch.Batch}}</td>
+            <td>{{batch.Fees}}</td>
+            <td>{{batch.Duration}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
